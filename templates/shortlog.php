@@ -25,7 +25,7 @@ foreach ($page['shortlog'] as $l) {
 			$type = 'head';
 			if ($parts[0] == 'tags') { $type = 'tag'; }
 			elseif ($parts[0] == 'remotes') { $type = 'remote'; }
-			echo "<span class=\"label $type\" title=\"$ref\">$shortref</span>";
+			echo "<span class=\"label $type\" title=\"$ref\">" . htmlentities_wrapper($shortref) . "</span>";
 		}
 	}
 	echo "</td>\n";

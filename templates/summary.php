@@ -25,7 +25,7 @@ foreach ($page['heads'] as $h) {
 	$tr_class = $tr_class=="odd" ? "even" : "odd";
 	echo "<tr class=\"$tr_class\">\n";
 	echo "\t<td>$h[date]</td>\n";
-	echo "\t<td><a href=\"". makelink(array('a' => 'shortlog', 'p' => $page['project'], 'h' => $h['fullname'])) ."\">$h[name]</a></td>\n";
+	echo "\t<td><a href=\"". makelink(array('a' => 'shortlog', 'p' => $page['project'], 'h' => $h['fullname'])) ."\">" . htmlentities_wrapper($h['name']) . "</a></td>\n";
 	echo "\t<td></td>\n";
 	echo "</tr>\n";
 }
