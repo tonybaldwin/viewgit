@@ -28,3 +28,17 @@ First installation
   You can also look at inc/example-localconfig.php for example config.
 - Copy doc/example-htaccess to .htaccess and edit RewriteBase in it
 
+Troubleshooting
+===============
+
+Add the following to your localconfig.php:
+$conf['debug'] = true;
+$conf['debug_command_trace'] = true;
+
+This will show a debug trace of the git commands being run. If you see non-zero
+exit values, try running the commands manually as the webserver user, to see
+what goes wrong:
+
+$ sudo su www-data
+$ <paste command>
+
